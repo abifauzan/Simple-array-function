@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="favicon.ico">
+	<title>BAYZ MART</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/signin.css">
+
+</head>
+<body>
+<div id="wrapper">
+	<div class="container">
+		<div id="login">
+			<form class="form-signin" id="formUser" action="core/SigninController.php" method="POST">
+				<h2 class="form-signin-heading">Silahkan isi nama anda</h2>
+				<label for="name" class="sr-only">Name</label>
+				<input type="text" id="name" name="name" class="form-control" placeholder="Name" required autofocus>
+				<br>
+				<button class="btn btn-lg btn-primary btn-block" type="submit">Masuk ke Aplikasi</button>
+			</form>
+		</div>
+	</div>
+
+	<div class="container" id="home">
+		<div class="header clearfix">
+			<nav>
+				<ul class="nav nav-pills float-right">
+					<li class="nav-item">
+						<a class="nav-link active" href="#" id="exitApp">Keluar Aplikasi <span class="sr-only">(current)</span></a>
+					</li>
+				</ul>
+			</nav>
+			<h3 class="text-muted" id="textWelcome"></h3>
+		</div>
+
+		<table class="table table-hover">
+			<thead class="thead-dark">
+			<tr>
+				<th>#</th>
+				<th>Kode Barang</th>
+				<th>Nama Barang</th>
+				<th>Harga Satuan</th>
+			</tr>
+			</thead>
+			<tbody id="mainData">
+			</tbody>
+		</table>
+		<br>
+			<div class="card" id="step1">
+				<div class="card-header bg-dark text-white">
+					Featured
+				</div>
+				<div class="card-body">
+					<h5 class="card-title">Masukkan banyaknya barang yang dibeli</h5>
+					<input type="number" class="form-control" id="totalBarang" name="totalBarang" placeholder="Masukan angka" required autofocus>
+					<span class="text-danger text-err-barang">* Please spesify the value</span>
+					<div class="mb-md-3"></div>
+					<button type="button" id="btnBarang" class="btn btn-info">Submit</button>
+
+				</div>
+			</div>
+
+			<div class="card" id="step2">
+				<div class="card-header bg-dark text-white">
+					Featured
+				</div>
+				<div class="card-body">
+					<h5 class="card-title">Masukkan kode barang yang dibeli dan banyaknya</h5>
+					<div id="barangloop"></div>
+
+					<div class="mb-md-3"></div>
+					<button type="button" id="btnBeli" class="btn btn-info">Submit</button>
+					<button type="button" class="btn btn-warning btnReset">Reset</button>
+				</div>
+			</div>
+
+		<div class="card" id="step3">
+			<div class="card-header bg-dark text-white">
+				Featured
+			</div>
+			<div class="card-body">
+				<h5 class="card-title">Daftar Barang yang dibeli </h5>
+
+				<table class="table">
+					<thead class="thead-light">
+					<tr>
+						<th>#</th>
+						<th>Kode Barang</th>
+						<th>Nama Barang</th>
+						<th>Jumlah Barang</th>
+						<th>Harga</th>
+					</tr>
+					</thead>
+					<tbody id="resultData">
+					</tbody>
+				</table>
+				<button type="button" class="btn btn-warning btnReset">Reset</button>
+			</div>
+		</div>
+
+		<br><br>
+		<footer class="footer">
+			<p>&copy; Developed by : Abi Fauzan</p>
+		</footer>
+
+	</div> <!-- /container -->
+
+</div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/magic.js"></script>
+</body>
+</html>
